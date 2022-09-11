@@ -6,9 +6,9 @@
 **5** 3 слоя абстракции / 3 layers of abstraction;<br>
 **6** "тонкие" контроллеры / "thin" controllers;<br>
 **7** БД содержит / The DB contains:<br>
-	*название / name;<br>
-	*студия-разработчик / developer studio;<br>
-	*жанр / genre;<br>
+ + название / name;<br>
+ + студия-разработчик / developer studio;<br>
+ + жанр / genre;<br>
 
 
 
