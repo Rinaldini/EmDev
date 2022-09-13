@@ -26,17 +26,33 @@
 					CREATE TABLE game_to_studio(game_d INT, studio_id INT);")
         or die(print_r($dbh->errorInfo(), true));
 
-        $dbh->exec("USE $db_name; INSERT INTO game(game) VALUES('Pac-Man')");
-        $dbh->exec("USE $db_name; INSERT INTO game(game) VALUES('Lode Runner')");
-        $dbh->exec("USE $db_name; INSERT INTO game(game) VALUES('Mario')");
-
     }
     catch (PDOException $e) {
         die("DB ERROR: " . $e->getMessage());
     }
 
+    try {
+    	$games = ["Pac-Man", "Lode Runner", "Mario", "Syberia", "Counter-Strike"];
+        $studios = ["Namco", "Broderbund&Ariolasoft", "Nintendo", "Microids", "Valve Corporation"];
+        $genres = ["arcade", "platformer", "quest", "FPS", "RTS"];
+
+        $dbh->exec("USE $db_name;");
+
+        foreach ($games as $game) {
+        	$dbh->exec("INSERT INTO game(game) VALUES('$game');");
+        }
+
+        foreach ($studios as $studio) {
+        	$dbh->exec("INSERT INTO studio(studio) VALUES('$studio');");
+        }
+
+        foreach ($genres as $genre) {
+        	$dbh->exec("INSERT INTO genre(genre) VALUES('$genre');");
+        }
 
 
+    } catch (PDOException $e) {
+    	die("DB ERROR: " . $e->getMessage());
+    }
 
-	
 ?>
