@@ -61,8 +61,8 @@
     	die("DB ERROR: " . $e->getMessage());
     }
 
-    include("view/view.php");
+    /*include("view/view.php");
     $view = new View();
-    $view->render(" It's M-V-C");
+    $view->render(" It's M-V-C");*/
 
 ?>
