@@ -1,0 +1,18 @@
+table {
+    margin: auto;
+    border: none;
+    width: 30%;
+    border-collapse: collapse;
+}
+
+tr {
+	background-color: skyblue;
+}
+
+td, th {
+   border: 1px solid white;
+}
+
+.row:hover {
+	background-color: white;
+}

@@ -44,12 +44,10 @@
         $dbh->exec("USE $db_name;");
 
         foreach ($studios as $studio) {
-        	echo "$studio <br>";
         	$dbh->exec("INSERT INTO studio(studio) VALUES('$studio');");
         }
 
         foreach ($genres as $genre) {
-        	echo "$genre <br>";
         	$dbh->exec("INSERT INTO genre(genre) VALUES('$genre');");
         }
 
@@ -60,9 +58,5 @@
     } catch (PDOException $e) {
     	die("DB ERROR: " . $e->getMessage());
     }
-
-    /*include("view/view.php");
-    $view = new View();
-    $view->render(" It's M-V-C");*/
 
 ?>

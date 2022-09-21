@@ -1,15 +1,15 @@
 <?php
 	
-	require("create_testdb.php");
+	include("create_testdb.php");
 
-	require("db.php");
-	require("view/View.php");
-	require("model/Model.php");
-	require("controller/Controller.php");
+	include("db.php");
+	include("view/View.php");
+	include("model/Model.php");
+	include("controller/Controller.php");
 
 	$control = new Controller();
 	$control->index();
 	
-	phpinfo();
+	//phpinfo();
 
 ?>
