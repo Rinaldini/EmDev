@@ -29,6 +29,7 @@ emdev
   |----create_testdb.php
   |----db_login.php
   |----db.php
+  |----.htaccess
   |
   |--view
   |	   |----view.php
